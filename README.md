@@ -1,4 +1,4 @@
-# PHP 7.3 + Apache
+# PHP 5.6 + Apache
 
 ### Fazendo o rebuild
 ```sh
@@ -14,7 +14,8 @@ $ docker push fococomunicacao/php56-apache:latest
 
 ### Updates
 - 2020-07-16 Adicionando comandos nano e vim
-- 2020-07-16 Adicionado SOAP e suporte a MySQL via PDO
+- 2020-07-16 Adicionado SOAP e suporte à MySQL via PDO
 - 2020-07-16 Executando autoremove e autoclean
+- 2020-07-16 Adicionando suport à MySQL via mysqli
 
 No dockerhub [fococomunicacao/php56-apache](https://hub.docker.com/r/fococomunicacao/php56-apache)

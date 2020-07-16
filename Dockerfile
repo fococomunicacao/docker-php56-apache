@@ -16,7 +16,7 @@ RUN BEFORE_PWD=$(pwd) \
     && docker-php-ext-configure soap --enable-soap \
     && docker-php-ext-configure pdo_mysql --with-pdo-mysql \
     && docker-php-ext-configure zip --with-libzip \
-    && docker-php-ext-install mysql soap pdo_mysql intl zip \
+    && docker-php-ext-install mysql mysqli soap pdo_mysql intl zip \
     && mkdir -p /opt/xdebug \
         && cd /opt/xdebug \
         && curl -k -L https://github.com/xdebug/xdebug/archive/XDEBUG_2_5_5.tar.gz | tar zx \
@@ -43,7 +43,7 @@ RUN BEFORE_PWD=$(pwd) \
         xdebug.default_enable=on \n\
     " >> /usr/local/etc/php/conf.d/xdebug.ini \
     && echo "\n\
-        display_errors=0 \n\ 
+        display_errors = E_ALL & ~E_NOTICE & ~E_WARNING \n\ 
     " >> /usr/local/etc/php/conf.d/errors.ini
 
 RUN apt-get autoremove && apt-get autoclean
