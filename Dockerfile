@@ -29,9 +29,8 @@ RUN BEFORE_PWD=$(pwd) \
         && make install \
         && cd "${BEFORE_PWD}" \
         && rm -r /opt/xdebug \
-    && docker-php-ext-enable xdebug \
     && echo "\n\
-        zend_extension=$(find /usr/local/lib/php/extensions/ -name xdebug.so) \n\
+        ;zend_extension=$(find /usr/local/lib/php/extensions/ -name xdebug.so) \n\
         xdebug.remote_log = /var/www/html/xdebug.log \n\
         xdebug.remote_enable=on \n\
         xdebug.remote_handler=dbgp \n\
