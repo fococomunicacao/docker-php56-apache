@@ -17,5 +17,6 @@ $ docker push fococomunicacao/php56-apache:latest
 - 2020-07-16 Adicionado SOAP e suporte à MySQL via PDO
 - 2020-07-16 Executando autoremove e autoclean
 - 2020-07-16 Adicionando suport à MySQL via mysqli
+- 2020-07-22 Adicionando composer
 
 No dockerhub [fococomunicacao/php56-apache](https://hub.docker.com/r/fococomunicacao/php56-apache)

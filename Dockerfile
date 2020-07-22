@@ -46,6 +46,9 @@ RUN BEFORE_PWD=$(pwd) \
         display_errors = E_ALL & ~E_NOTICE & ~E_WARNING \n\ 
     " >> /usr/local/etc/php/conf.d/errors.ini
 
+RUN curl -sS https://getcomposer.org/installer \
+    | php -- --install-dir=/usr/local/bin --filename=composer
+
 RUN apt-get autoremove && apt-get autoclean
 
 RUN a2enmod rewrite && service apache2 restart
