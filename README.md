@@ -18,5 +18,6 @@ $ docker push fococomunicacao/php56-apache:latest
 - 2020-07-16 Executando autoremove e autoclean
 - 2020-07-16 Adicionando suport à MySQL via mysqli
 - 2020-07-22 Adicionando composer
+- 2020-08-06 Alterando Error Reporting do PHP para "E_ALL & ~E_NOTICE & ~E_WARNING & ~E_DEPRECATED"
 
 No dockerhub [fococomunicacao/php56-apache](https://hub.docker.com/r/fococomunicacao/php56-apache)

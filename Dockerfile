@@ -42,7 +42,7 @@ RUN BEFORE_PWD=$(pwd) \
         xdebug.default_enable=on \n\
     " >> /usr/local/etc/php/conf.d/xdebug.ini \
     && echo "\n\
-        display_errors = E_ALL & ~E_NOTICE & ~E_WARNING \n\ 
+        error_reporting = E_ALL & ~E_NOTICE & ~E_WARNING & ~E_DEPRECATED \n\ 
     " >> /usr/local/etc/php/conf.d/errors.ini
 
 RUN curl -sS https://getcomposer.org/installer \
